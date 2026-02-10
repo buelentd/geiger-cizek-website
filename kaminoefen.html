@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geiger & Cizek - Energie-, Klima- & Haustechnik in Straubing</title>
+    <meta name="description" content="Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung. Meisterbetrieb mit erfahrenem Team.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gc-red': '#E2001A',
+                        'gc-yellow': '#FFDD00',
+                        'gc-beige': '#CEC696',
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="/" class="flex items-center">
+                    <img src="https://hs-straubing.de/geiger-cizek_logo.svg" alt="Geiger & Cizek Logo" class="h-16 w-auto">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-6">
+                    <a href="/" class="text-gray-700 hover:text-gc-red font-semibold border-b-2 border-gc-red">Home</a>
+                    
+                    <div class="relative group">
+                        <a href="/heizungsbau.html" class="text-gray-700 hover:text-gc-red font-medium">
+                            Heizungsbau <span class="text-xs">▼</span>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="/heizungsbau/waermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Wärmepumpe</a>
+                            <a href="/heizungsbau/luftwaermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Luftwärmepumpe</a>
+                            <a href="/heizungsbau/hydraulischer-abgleich.html" class="block px-4 py-2 hover:bg-gray-100">Hydraulischer Abgleich</a>
+                            <a href="/heizungsbau/10-jahre-funktionsgarantie.html" class="block px-4 py-2 hover:bg-gray-100">10 Jahre Funktionsgarantie</a>
+                            <a href="/heizungsbau/heizungswartung-notdienst.html" class="block px-4 py-2 hover:bg-gray-100">Heizungswartung & Notdienst</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <a href="/kaminoefen.html" class="text-gray-700 hover:text-gc-red font-medium">
+                            Kaminöfen <span class="text-xs">▼</span>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="/kaminoefen/heizungsausstellung.html" class="block px-4 py-2 hover:bg-gray-100">Heizungsausstellung</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <a href="/badsanierung.html" class="text-gray-700 hover:text-gc-red font-medium">
+                            Badsanierung <span class="text-xs">▼</span>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="/badsanierung/komplettbadsanierung.html" class="block px-4 py-2 hover:bg-gray-100">Komplettbadsanierung</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/lueftung-wasser.html" class="text-gray-700 hover:text-gc-red font-medium">Lüftung & Wasser</a>
+                    
+                    <div class="relative group">
+                        <a href="/klimaanlage.html" class="text-gray-700 hover:text-gc-red font-medium">
+                            Klimaanlage <span class="text-xs">▼</span>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="/klimaanlage/split-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Split-Klimaanlage</a>
+                            <a href="/klimaanlage/multisplit-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Multisplit-Klimaanlage</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative group">
+                        <a href="/ueber-uns.html" class="text-gray-700 hover:text-gc-red font-medium">
+                            Über uns <span class="text-xs">▼</span>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="/ueber-uns/jobs.html" class="block px-4 py-2 hover:bg-gray-100">Jobs</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/kontakt.html" class="bg-gc-red text-white px-6 py-2 rounded-full hover:bg-red-700 font-semibold transition">Kontakt</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation (hidden by default) -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
+            <nav class="container mx-auto px-4 py-4 space-y-2">
+                <a href="/" class="block py-2 text-gc-red font-semibold">Home</a>
+                <a href="/heizungsbau.html" class="block py-2">Heizungsbau</a>
+                <a href="/kaminoefen.html" class="block py-2">Kaminöfen</a>
+                <a href="/badsanierung.html" class="block py-2">Badsanierung</a>
+                <a href="/lueftung-wasser.html" class="block py-2">Lüftung & Wasser</a>
+                <a href="/klimaanlage.html" class="block py-2">Klimaanlage</a>
+                <a href="/ueber-uns.html" class="block py-2">Über uns</a>
+                <a href="/kontakt.html" class="block py-2 text-gc-red font-semibold">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen bg-gradient-to-br from-gray-900 to-gray-700 flex items-center">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="container mx-auto px-4 relative z-10 text-white">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Energie-, Klima- & Haustechnik
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                    Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing und Umgebung
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/kontakt.html" class="bg-gc-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition text-center">
+                        Jetzt Kontakt aufnehmen →
+                    </a>
+                    <a href="tel:+4994218610588" class="bg-white text-gc-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition text-center">
+                        📞 09421 / 861 05 88
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wer wir sind -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-gray-900">Wer wir sind</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Mit <strong>Karl Geiger</strong> und <strong>Florian Cizek</strong> haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung/Lüftung/Sanitär zu tun, unterstützt von einem qualifizierten und motivierten jungen Team.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Wir bieten Ihnen überzeugende Arbeit, ein breites Leistungsspektrum und vor allem eine kompetente Beratung in <strong>Landshut, München, Passau und Straubing</strong>.
+                    </p>
+                </div>
+                <div class="bg-gray-100 rounded-3xl p-8">
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                ✓
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Meisterbetrieb</h3>
+                                <p class="text-gray-600">Erfahrene Experten mit Meisterbrief</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                ✓
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Qualifiziertes Team</h3>
+                                <p class="text-gray-600">Motivierte Fachkräfte für alle Bereiche</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                ✓
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Regionale Nähe</h3>
+                                <p class="text-gray-600">Schnell vor Ort in ganz Niederbayern</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unsere Leistungen -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Unsere Leistungen</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Heizungsbau -->
+                <a href="/heizungsbau.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">🔥</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Heizungsbau</h3>
+                    <p class="text-gray-600 mb-4">
+                        Moderne Heizsysteme: Wärmepumpen, Gasheizungen und mehr. Energieeffizient und zukunftssicher.
+                    </p>
+                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Kaminöfen -->
+                <a href="/kaminoefen.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">🪵</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Kaminöfen</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gemütliche Wärme für Ihr Zuhause. Pelletsöfen, Scheitholz und wasserführende Systeme.
+                    </p>
+                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Badsanierung -->
+                <a href="/badsanierung.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">🛁</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Badsanierung</h3>
+                    <p class="text-gray-600 mb-4">
+                        Vom alten zum Traumbad. Komplette Badsanierung aus einer Hand – modern und barrierefrei.
+                    </p>
+                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Lüftung & Wasser -->
+                <a href="/lueftung-wasser.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">💨</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Lüftung & Wasser</h3>
+                    <p class="text-gray-600 mb-4">
+                        Frische Luft und sauberes Wasser. Lüftungsanlagen und Wasseraufbereitung für Ihr Wohlbefinden.
+                    </p>
+                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Klimaanlage -->
+                <a href="/klimaanlage.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">❄️</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Klimaanlage</h3>
+                    <p class="text-gray-600 mb-4">
+                        Angenehmes Raumklima das ganze Jahr. Split- und Multisplit-Klimaanlagen für jeden Bedarf.
+                    </p>
+                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Über uns -->
+                <a href="/ueber-uns.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="text-5xl mb-4">👥</div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Über uns</h3>
+                    <p class="text-gray-600 mb-4">
+                        Lernen Sie unser Team kennen. Erfahrene Meister und qualifizierte Fachkräfte für Ihr Projekt.
+                    </p>
+                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-gc-red to-red-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Haben Sie Fragen?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Egal ob Heizungsbau, Kaminöfen oder eine komplette Badsanierung. Wir finden stets die beste Lösung für Ihre Immobilie.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+4994218610588" class="bg-white text-gc-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
+                    📞 09421 / 861 05 88
+                </a>
+                <a href="/kontakt.html" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gc-red transition">
+                    Kontaktformular →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="https://hs-straubing.de/geiger-cizek_logo.svg" alt="Geiger & Cizek" class="h-12 mb-4 brightness-0 invert">
+                    <p class="text-gray-400">
+                        Ihr zuverlässiger Partner für Heizung, Sanitär und Klimatechnik in Straubing.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Leistungen</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/heizungsbau.html" class="hover:text-gc-yellow">Heizungsbau</a></li>
+                        <li><a href="/kaminoefen.html" class="hover:text-gc-yellow">Kaminöfen</a></li>
+                        <li><a href="/badsanierung.html" class="hover:text-gc-yellow">Badsanierung</a></li>
+                        <li><a href="/klimaanlage.html" class="hover:text-gc-yellow">Klimaanlage</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Unternehmen</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/ueber-uns.html" class="hover:text-gc-yellow">Über uns</a></li>
+                        <li><a href="/ueber-uns/jobs.html" class="hover:text-gc-yellow">Jobs</a></li>
+                        <li><a href="/kontakt.html" class="hover:text-gc-yellow">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Kontakt</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Arndt-Sallinger-Str. 5</li>
+                        <li>94315 Straubing</li>
+                        <li class="pt-2">
+                            <a href="tel:+4994218610588" class="hover:text-gc-yellow">📞 09421 / 861 05 88</a>
+                        </li>
+                        <li>
+                            <a href="tel:+49160948770467" class="hover:text-gc-yellow">📱 0160 / 948 770 67</a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@hs-straubing.de" class="hover:text-gc-yellow">✉️ info@hs-straubing.de</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 Geiger & Cizek - Alle Rechte vorbehalten</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
