@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaminöfen Straubing - Pelletöfen & Holzöfen | Geiger & Cizek</title>
-    <meta name="description" content="Kaminöfen & Pelletöfen in Straubing: Gemütliche Wärme für Ihr Zuhause. Beratung, Verkauf & Installation vom Meisterbetrieb. ☎ 09421 / 861 05 88">
+    <title>Kaminöfen Straubing - Pellet & Holzöfen | Geiger & Cizek</title>
+    <meta name="description" content="Kaminöfen und Pelletöfen in Straubing: Gemütliche Wärme für Ihr Zuhause. Beratung, Verkauf und Montage vom Meisterbetrieb. ☎ 09421 / 861 05 88">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     
     <!-- Custom Tailwind Config -->
     <script>
@@ -42,12 +45,10 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
                 <a href="index.html" class="flex items-center">
                     <img src="https://hs-straubing.de/geiger-cizek_logo.svg" alt="Geiger & Cizek Logo" class="h-16 w-auto">
                 </a>
                 
-                <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex space-x-6">
                     <a href="index.html" class="text-gray-700 hover:text-gc-red font-medium">Home</a>
                     
@@ -55,7 +56,7 @@
                         <a href="heizungsbau.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Heizungsbau <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/heizungsbau/waermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Wärmepumpe</a>
                             <a href="/heizungsbau/luftwaermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Luftwärmepumpe</a>
                             <a href="/heizungsbau/hydraulischer-abgleich.html" class="block px-4 py-2 hover:bg-gray-100">Hydraulischer Abgleich</a>
@@ -68,7 +69,7 @@
                         <a href="kaminoefen.html" class="text-gray-700 hover:text-gc-red font-semibold border-b-2 border-gc-red">
                             Kaminöfen <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/kaminoefen/heizungsausstellung.html" class="block px-4 py-2 hover:bg-gray-100">Heizungsausstellung</a>
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                         <a href="badsanierung.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Badsanierung <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/badsanierung/komplettbadsanierung.html" class="block px-4 py-2 hover:bg-gray-100">Komplettbadsanierung</a>
                         </div>
                     </div>
@@ -88,7 +89,7 @@
                         <a href="klimaanlage.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Klimaanlage <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/klimaanlage/split-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Split-Klimaanlage</a>
                             <a href="/klimaanlage/multisplit-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Multisplit-Klimaanlage</a>
                         </div>
@@ -98,52 +99,50 @@
                         <a href="ueber-uns.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Über uns <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/ueber-uns/jobs.html" class="block px-4 py-2 hover:bg-gray-100">Jobs</a>
                         </div>
                     </div>
                     
-                    <a href="kontakt.html" class="bg-gc-red text-white px-6 py-2 rounded-full hover:bg-red-700 font-semibold transition">Kontakt</a>
+                    <a href="kontakt.html" class="bg-gc-red text-white px-8 py-4 rounded-full hover:bg-red-700 font-semibold transition">Kontakt</a>
                 </nav>
                 
-                <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobileMenuBtn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
         
-        <!-- Mobile Navigation (hidden by default) -->
         <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
             <nav class="container mx-auto px-4 py-4 space-y-2">
-                <a href="index.html" class="block py-2">Home</a>
-                <a href="heizungsbau.html" class="block py-2">Heizungsbau</a>
+                <a href="index.html" class="block py-2 hover:text-gc-red">Home</a>
+                <a href="heizungsbau.html" class="block py-2 hover:text-gc-red">Heizungsbau</a>
                 <a href="kaminoefen.html" class="block py-2 text-gc-red font-semibold">Kaminöfen</a>
-                <a href="badsanierung.html" class="block py-2">Badsanierung</a>
-                <a href="lueftung-wasser.html" class="block py-2">Lüftung & Wasser</a>
-                <a href="klimaanlage.html" class="block py-2">Klimaanlage</a>
-                <a href="ueber-uns.html" class="block py-2">Über uns</a>
+                <a href="badsanierung.html" class="block py-2 hover:text-gc-red">Badsanierung</a>
+                <a href="lueftung-wasser.html" class="block py-2 hover:text-gc-red">Lüftung & Wasser</a>
+                <a href="klimaanlage.html" class="block py-2 hover:text-gc-red">Klimaanlage</a>
+                <a href="ueber-uns.html" class="block py-2 hover:text-gc-red">Über uns</a>
                 <a href="kontakt.html" class="block py-2 text-gc-red font-semibold">Kontakt</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen bg-gradient-to-br from-amber-800 to-orange-900 flex items-center">
+    <section class="relative h-screen bg-cover bg-center flex items-center" style="background-image: url('assets/images/hero-kaminoefen.webp');">
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="container mx-auto px-4 relative z-10 text-white">
             <div class="max-w-3xl">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Kaminöfen in Straubing
+                <h1 class="text-5xl md:text-6xl font-bold mb-8">
+                    Kaminöfen & Pelletöfen
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-200">
-                    Gemütliche Wärme für Ihr Zuhause. Entdecken Sie unsere Auswahl an Kaminöfen, Pelletöfen und wasserführenden Systemen in unserer Ausstellung.
+                    Gemütliche Wärme für Ihr Zuhause. Besuchen Sie unsere Heizungsausstellung und lassen Sie sich beraten.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="kontakt.html" class="bg-gc-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition text-center">
-                        Beratungstermin vereinbaren →
+                        Beratungstermin →
                     </a>
                     <a href="tel:+4994218610588" class="bg-white text-gc-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition text-center">
                         📞 09421 / 861 05 88
@@ -153,100 +152,119 @@
         </div>
     </section>
 
-    <!-- Kaminöfen Beschreibung -->
+    <!-- Intro -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold mb-6 text-gray-900">Kaminöfen – Wärme zum Wohlfühlen</h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    Ein Kaminofen schafft nicht nur wohlige Wärme, sondern auch eine einzigartige Atmosphäre in Ihrem Zuhause. Bei Geiger & Cizek in Straubing bieten wir Ihnen eine große Auswahl an hochwertigen <strong>Kaminöfen, Pelletöfen und wasserführenden Kaminöfen</strong>, die perfekt zu Ihrem individuellen Bedarf passen.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    Ob klassischer Scheitholzofen für rustikales Ambiente, moderner Pelletofen für komfortable Bedienung oder wasserführender Kaminofen zur Unterstützung Ihrer Heizung – wir beraten Sie kompetent und installieren Ihren neuen Ofen fachgerecht. Als Meisterbetrieb achten wir auf höchste Qualität, Effizienz und Einhaltung aller gesetzlichen Vorschriften.
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">Wärme zum Wohlfühlen</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Ein Kaminofen oder Pelletofen schafft nicht nur wohlige Wärme, sondern auch eine einzigartige Atmosphäre in Ihrem Zuhause.
                 </p>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Besuchen Sie unsere <strong>Heizungsausstellung in Straubing</strong> und lassen Sie sich von der Vielfalt inspirieren. Unsere Experten zeigen Ihnen verschiedene Modelle, erklären die Vor- und Nachteile und helfen Ihnen, den perfekten Kaminofen für Ihr Zuhause zu finden. Von der Planung über die Installation bis zur Wartung – wir sind Ihr Partner für behagliche Wärme.
+                    Besuchen Sie unsere Heizungsausstellung und lassen Sie sich von unserem Fachteam beraten.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Kaminöfen Services -->
+    <!-- Ofenarten -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Unsere Kaminofen-Leistungen</h2>
+            <h2 class="text-4xl font-bold text-center mb-12">Unsere Öfen</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Scheitholz-Kaminöfen -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg">
-                    <div class="text-5xl mb-4">🪵</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Scheitholz-Kaminöfen</h3>
+                <!-- Pelletofen -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-heizung.svg" alt="Pellet" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Pelletofen</h3>
                     <p class="text-gray-600 mb-4">
-                        Klassische Holzöfen für authentisches Kaminfeuer-Erlebnis. Robust, langlebig und atmosphärisch.
+                        Komfortabel und umweltfreundlich. Automatische Beschickung für langanhaltende Wärme.
                     </p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Verschiedene Designs</li>
-                        <li>✓ Hoher Wirkungsgrad</li>
-                        <li>✓ Umweltfreundlich</li>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>✓ Automatische Befüllung</li>
+                        <li>✓ CO2-neutral</li>
+                        <li>✓ Programmierbar</li>
                     </ul>
                 </div>
                 
-                <!-- Pelletöfen -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg">
-                    <div class="text-5xl mb-4">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Pelletöfen</h3>
+                <!-- Scheitholzofen -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-heizung.svg" alt="Holz" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Scheitholzofen</h3>
                     <p class="text-gray-600 mb-4">
-                        Komfortable Bedienung mit automatischer Brennstoffzufuhr. Programmierbar und effizient.
+                        Klassisches Kaminfeeling. Knisterndes Feuer und behagliche Wärme.
                     </p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Automatische Zündung</li>
-                        <li>✓ Programmierbare Heizzeiten</li>
-                        <li>✓ Geringer Wartungsaufwand</li>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>✓ Echtes Flammenspiel</li>
+                        <li>✓ Unabhängig von Strom</li>
+                        <li>✓ Traditionell</li>
                     </ul>
                 </div>
                 
-                <!-- Wasserführende Kaminöfen -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg">
-                    <div class="text-5xl mb-4">♨️</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Wasserführende Öfen</h3>
+                <!-- Wasserführend -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-heizung.svg" alt="Wasser" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Wasserführend</h3>
                     <p class="text-gray-600 mb-4">
-                        Unterstützt Ihre Zentralheizung und Warmwasserbereitung. Doppelte Effizienz.
+                        Heizen Sie Ihr ganzes Haus. Unterstützt Ihre Zentralheizung effizient.
                     </p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Einbindung ins Heizsystem</li>
-                        <li>✓ Heizkosten sparen</li>
-                        <li>✓ Förderfähig</li>
-                    </ul>
-                </div>
-                
-                <!-- Beratung & Planung -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg">
-                    <div class="text-5xl mb-4">📐</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Beratung & Planung</h3>
-                    <p class="text-gray-600 mb-4">
-                        Individuelle Beratung für den perfekten Kaminofen. Abgestimmt auf Ihre Räumlichkeiten.
-                    </p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Raumgrößenberechnung</li>
-                        <li>✓ Schornsteinprüfung</li>
-                        <li>✓ Design-Beratung</li>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>✓ Anbindung ans Heizsystem</li>
+                        <li>✓ Höchste Effizienz</li>
+                        <li>✓ Energieeinsparung</li>
                     </ul>
                 </div>
             </div>
-            
-            <!-- Heizungsausstellung -->
-            <div class="mt-8">
-                <a href="/kaminoefen/heizungsausstellung.html" class="block bg-gc-red text-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold mb-3">Besuchen Sie unsere Heizungsausstellung</h3>
-                            <p class="text-lg">
-                                Erleben Sie unsere Kaminöfen live in Straubing. Sehen, fühlen, vergleichen – finden Sie Ihren Traumofen.
-                            </p>
+        </div>
+    </section>
+
+    <!-- Heizungsausstellung -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8">Unsere Heizungsausstellung</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Besuchen Sie uns und erleben Sie verschiedene Modelle live. Unsere Fachberater helfen Ihnen, den perfekten Ofen für Ihr Zuhause zu finden.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0 font-bold text-xl">
+                                ✓
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Live erleben</h3>
+                                <p class="text-gray-600">Modelle in Betrieb ansehen</p>
+                            </div>
                         </div>
-                        <div class="text-6xl ml-4">🏛️</div>
+                        <div class="flex items-start">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0 font-bold text-xl">
+                                ✓
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Fachberatung</h3>
+                                <p class="text-gray-600">Individuelle Beratung durch Experten</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0 font-bold text-xl">
+                                ✓
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Große Auswahl</h3>
+                                <p class="text-gray-600">Verschiedene Hersteller und Designs</p>
+                            </div>
+                        </div>
                     </div>
-                </a>
+                    <div class="mt-8">
+                        <a href="/kaminoefen/heizungsausstellung.html" class="bg-gc-red text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition inline-block">
+                            Zur Ausstellung →
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-3xl p-8 h-96 flex items-center justify-center">
+                    <p class="text-gray-400 text-center">Ausstellungs-Bild</p>
+                </div>
             </div>
         </div>
     </section>
@@ -254,9 +272,9 @@
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-gc-red to-red-700 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6">Bereit für gemütliche Wärme?</h2>
+            <h2 class="text-4xl font-bold mb-8">Bereit für Ihren neuen Ofen?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Lassen Sie sich in unserer Ausstellung inspirieren oder vereinbaren Sie einen Beratungstermin. Wir helfen Ihnen, den perfekten Kaminofen für Ihr Zuhause zu finden.
+                Besuchen Sie unsere Ausstellung oder vereinbaren Sie einen Beratungstermin. Wir freuen uns auf Sie!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+4994218610588" class="bg-white text-gc-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
@@ -283,19 +301,19 @@
                 <div>
                     <h3 class="font-bold text-lg mb-4">Leistungen</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="heizungsbau.html" class="hover:text-gc-yellow">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html" class="hover:text-gc-yellow">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html" class="hover:text-gc-yellow">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html" class="hover:text-gc-yellow">Klimaanlage</a></li>
+                        <li><a href="heizungsbau.html" class="hover:text-gc-yellow transition">Heizungsbau</a></li>
+                        <li><a href="kaminoefen.html" class="hover:text-gc-yellow transition">Kaminöfen</a></li>
+                        <li><a href="badsanierung.html" class="hover:text-gc-yellow transition">Badsanierung</a></li>
+                        <li><a href="klimaanlage.html" class="hover:text-gc-yellow transition">Klimaanlage</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="font-bold text-lg mb-4">Unternehmen</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="ueber-uns.html" class="hover:text-gc-yellow">Über uns</a></li>
-                        <li><a href="/ueber-uns/jobs.html" class="hover:text-gc-yellow">Jobs</a></li>
-                        <li><a href="kontakt.html" class="hover:text-gc-yellow">Kontakt</a></li>
+                        <li><a href="ueber-uns.html" class="hover:text-gc-yellow transition">Über uns</a></li>
+                        <li><a href="/ueber-uns/jobs.html" class="hover:text-gc-yellow transition">Jobs</a></li>
+                        <li><a href="kontakt.html" class="hover:text-gc-yellow transition">Kontakt</a></li>
                     </ul>
                 </div>
                 
@@ -305,13 +323,13 @@
                         <li>Arndt-Sallinger-Str. 5</li>
                         <li>94315 Straubing</li>
                         <li class="pt-2">
-                            <a href="tel:+4994218610588" class="hover:text-gc-yellow">📞 09421 / 861 05 88</a>
+                            <a href="tel:+4994218610588" class="hover:text-gc-yellow transition">📞 09421 / 861 05 88</a>
                         </li>
                         <li>
-                            <a href="tel:+49160948770467" class="hover:text-gc-yellow">📱 0160 / 948 770 67</a>
+                            <a href="tel:+49160948770467" class="hover:text-gc-yellow transition">📱 0160 / 948 770 67</a>
                         </li>
                         <li>
-                            <a href="mailto:info@hs-straubing.de" class="hover:text-gc-yellow">✉️ info@hs-straubing.de</a>
+                            <a href="mailto:info@hs-straubing.de" class="hover:text-gc-yellow transition">✉️ info@hs-straubing.de</a>
                         </li>
                     </ul>
                 </div>
@@ -323,11 +341,16 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 
 </body>

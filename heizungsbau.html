@@ -9,6 +9,9 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
     <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
@@ -42,12 +45,10 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
                 <a href="index.html" class="flex items-center">
                     <img src="https://hs-straubing.de/geiger-cizek_logo.svg" alt="Geiger & Cizek Logo" class="h-16 w-auto">
                 </a>
                 
-                <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex space-x-6">
                     <a href="index.html" class="text-gray-700 hover:text-gc-red font-medium">Home</a>
                     
@@ -55,7 +56,7 @@
                         <a href="heizungsbau.html" class="text-gray-700 hover:text-gc-red font-semibold border-b-2 border-gc-red">
                             Heizungsbau <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/heizungsbau/waermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Wärmepumpe</a>
                             <a href="/heizungsbau/luftwaermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Luftwärmepumpe</a>
                             <a href="/heizungsbau/hydraulischer-abgleich.html" class="block px-4 py-2 hover:bg-gray-100">Hydraulischer Abgleich</a>
@@ -68,7 +69,7 @@
                         <a href="kaminoefen.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Kaminöfen <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/kaminoefen/heizungsausstellung.html" class="block px-4 py-2 hover:bg-gray-100">Heizungsausstellung</a>
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                         <a href="badsanierung.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Badsanierung <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/badsanierung/komplettbadsanierung.html" class="block px-4 py-2 hover:bg-gray-100">Komplettbadsanierung</a>
                         </div>
                     </div>
@@ -88,7 +89,7 @@
                         <a href="klimaanlage.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Klimaanlage <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/klimaanlage/split-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Split-Klimaanlage</a>
                             <a href="/klimaanlage/multisplit-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Multisplit-Klimaanlage</a>
                         </div>
@@ -98,48 +99,46 @@
                         <a href="ueber-uns.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Über uns <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/ueber-uns/jobs.html" class="block px-4 py-2 hover:bg-gray-100">Jobs</a>
                         </div>
                     </div>
                     
-                    <a href="kontakt.html" class="bg-gc-red text-white px-6 py-2 rounded-full hover:bg-red-700 font-semibold transition">Kontakt</a>
+                    <a href="kontakt.html" class="bg-gc-red text-white px-8 py-4 rounded-full hover:bg-red-700 font-semibold transition">Kontakt</a>
                 </nav>
                 
-                <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobileMenuBtn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
         
-        <!-- Mobile Navigation (hidden by default) -->
         <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
             <nav class="container mx-auto px-4 py-4 space-y-2">
-                <a href="index.html" class="block py-2">Home</a>
+                <a href="index.html" class="block py-2 hover:text-gc-red">Home</a>
                 <a href="heizungsbau.html" class="block py-2 text-gc-red font-semibold">Heizungsbau</a>
-                <a href="kaminoefen.html" class="block py-2">Kaminöfen</a>
-                <a href="badsanierung.html" class="block py-2">Badsanierung</a>
-                <a href="lueftung-wasser.html" class="block py-2">Lüftung & Wasser</a>
-                <a href="klimaanlage.html" class="block py-2">Klimaanlage</a>
-                <a href="ueber-uns.html" class="block py-2">Über uns</a>
+                <a href="kaminoefen.html" class="block py-2 hover:text-gc-red">Kaminöfen</a>
+                <a href="badsanierung.html" class="block py-2 hover:text-gc-red">Badsanierung</a>
+                <a href="lueftung-wasser.html" class="block py-2 hover:text-gc-red">Lüftung & Wasser</a>
+                <a href="klimaanlage.html" class="block py-2 hover:text-gc-red">Klimaanlage</a>
+                <a href="ueber-uns.html" class="block py-2 hover:text-gc-red">Über uns</a>
                 <a href="kontakt.html" class="block py-2 text-gc-red font-semibold">Kontakt</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-screen bg-gradient-to-br from-orange-600 to-red-700 flex items-center">
+    <section class="relative h-screen bg-cover bg-center flex items-center" style="background-image: url('assets/images/hero-heizungsbau.webp');">
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="container mx-auto px-4 relative z-10 text-white">
             <div class="max-w-3xl">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Heizungsbau in Straubing
+                <h1 class="text-5xl md:text-6xl font-bold mb-8">
+                    Heizungsbau vom Meisterbetrieb
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-200">
-                    Moderne, energieeffiziente Heizungsanlagen vom Meisterbetrieb. Wärmepumpen, Gasheizungen und mehr – mit 10 Jahren Funktionsgarantie.
+                    Moderne Heizsysteme für Ihr Zuhause: Wärmepumpen, Gasheizungen und nachhaltige Lösungen. Mit 10 Jahren Funktionsgarantie.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="kontakt.html" class="bg-gc-red text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition text-center">
@@ -153,84 +152,127 @@
         </div>
     </section>
 
-    <!-- Heizungsbau Beschreibung -->
+    <!-- Intro -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold mb-6 text-gray-900">Heizungsbau für die Zukunft</h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    Als Meisterbetrieb für Heizungsbau in Straubing und Umgebung installieren wir moderne, energieeffiziente Heizungsanlagen, die perfekt auf Ihre Bedürfnisse abgestimmt sind. Ob Neubau, Sanierung oder Heizungstausch – wir finden die optimale Lösung für Ihre Immobilie.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                    Unser Leistungsspektrum umfasst <strong>Wärmepumpen</strong>, <strong>Gas- und Ölheizungen</strong>, <strong>Pelletheizungen</strong> sowie <strong>Hybridheizungen</strong>. Durch unsere langjährige Erfahrung und kontinuierliche Weiterbildung garantieren wir Ihnen modernste Heiztechnik, die langfristig Kosten spart und die Umwelt schont.
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8">Ihre neue Heizung in besten Händen</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Eine moderne Heizungsanlage ist das Herzstück jedes Gebäudes. Als Meisterbetrieb planen, installieren und warten wir Ihre Heizung mit höchster Sorgfalt und jahrelanger Erfahrung.
                 </p>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Besonders stolz sind wir auf unsere <strong>10 Jahre Funktionsgarantie</strong> auf ausgewählte Heizungsanlagen – ein Versprechen, das für unsere Qualität spricht. Von der Beratung über die Installation bis zur regelmäßigen Wartung und unserem 24/7 Notdienst sind wir Ihr zuverlässiger Partner in Straubing, Landshut, München und Passau.
+                    Von der ersten Beratung über die Installation bis zum Wartungsservice – bei uns bekommen Sie alles aus einer Hand.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Heizungsbau Services -->
+    <!-- Heizungsarten -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Unsere Heizungsbau-Leistungen</h2>
+            <h2 class="text-4xl font-bold text-center mb-12">Unsere Heizungssysteme</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Wärmepumpe -->
-                <a href="/heizungsbau/waermepumpe.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">♨️</div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-heizung.svg" alt="Wärmepumpe" class="w-16 h-16 mb-4">
                     <h3 class="text-2xl font-bold mb-3 text-gray-900">Wärmepumpe</h3>
                     <p class="text-gray-600 mb-4">
-                        Umweltfreundlich heizen mit Erdwärme, Luft oder Grundwasser. Zukunftssichere Technologie.
+                        Nutzen Sie kostenlose Umweltwärme aus Luft, Erde oder Wasser. Effizient, umweltfreundlich und zukunftssicher.
                     </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
-                </a>
+                    <a href="/heizungsbau/waermepumpe.html" class="text-gc-red font-semibold">Mehr erfahren →</a>
+                </div>
                 
-                <!-- Luftwärmepumpe -->
-                <a href="/heizungsbau/luftwaermepumpe.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">💨</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Luftwärmepumpe</h3>
+                <!-- Gasheizung -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-heizung.svg" alt="Gas" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Gasheizung</h3>
                     <p class="text-gray-600 mb-4">
-                        Effizient und kostengünstig in der Installation. Ideal für Neubau und Sanierung.
+                        Bewährte Technologie mit hoher Effizienz. Moderne Brennwerttechnik für minimalen Verbrauch.
                     </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
-                </a>
+                    <span class="text-gray-400">Individuelle Beratung</span>
+                </div>
+                
+                <!-- Ölheizung -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-heizung.svg" alt="Öl" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Ölheizung</h3>
+                    <p class="text-gray-600 mb-4">
+                        Zuverlässige Wärme auch in ländlichen Gebieten. Moderne Brennwerttechnik spart Energie.
+                    </p>
+                    <span class="text-gray-400">Wartung & Modernisierung</span>
+                </div>
+                
+                <!-- Pelletheizung -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-heizung.svg" alt="Pellets" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Pelletheizung</h3>
+                    <p class="text-gray-600 mb-4">
+                        Heizen mit nachwachsendem Rohstoff. CO2-neutral und komfortabel automatisiert.
+                    </p>
+                    <span class="text-gray-400">Nachhaltige Lösung</span>
+                </div>
+                
+                <!-- Solarthermie -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-energie.svg" alt="Solar" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Solarthermie</h3>
+                    <p class="text-gray-600 mb-4">
+                        Kostenlose Energie von der Sonne. Perfekt als Ergänzung zu Ihrer Heizung.
+                    </p>
+                    <span class="text-gray-400">Ergänzungssystem</span>
+                </div>
                 
                 <!-- Hydraulischer Abgleich -->
-                <a href="/heizungsbau/hydraulischer-abgleich.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">⚙️</div>
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="assets/icons/icon-qualitaet.svg" alt="Abgleich" class="w-16 h-16 mb-4">
                     <h3 class="text-2xl font-bold mb-3 text-gray-900">Hydraulischer Abgleich</h3>
                     <p class="text-gray-600 mb-4">
-                        Optimierung Ihrer Heizung für maximale Effizienz und gleichmäßige Wärmeverteilung.
+                        Optimieren Sie Ihre bestehende Heizung. Bis zu 15% Energie sparen.
                     </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
-                </a>
-                
-                <!-- 10 Jahre Funktionsgarantie -->
-                <a href="/heizungsbau/10-jahre-funktionsgarantie.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">✅</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">10 Jahre Garantie</h3>
-                    <p class="text-gray-600 mb-4">
-                        Unsere Funktionsgarantie für ausgewählte Heizungsanlagen – Qualität, die überzeugt.
-                    </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
-                </a>
+                    <a href="/heizungsbau/hydraulischer-abgleich.html" class="text-gc-red font-semibold">Mehr erfahren →</a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Vorteile -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Ihre Vorteile mit Geiger & Cizek</h2>
             
-            <!-- Zusätzlicher Service -->
-            <div class="mt-8">
-                <a href="/heizungsbau/heizungswartung-notdienst.html" class="block bg-gc-red text-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h3 class="text-2xl font-bold mb-3">Heizungswartung & 24/7 Notdienst</h3>
-                            <p class="text-lg">
-                                Regelmäßige Wartung verlängert die Lebensdauer Ihrer Heizung. Im Notfall sind wir rund um die Uhr für Sie da.
-                            </p>
-                        </div>
-                        <div class="text-6xl ml-4">🔧</div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-sicherheit.svg" alt="Garantie" class="w-16 h-16">
                     </div>
-                </a>
+                    <h3 class="text-xl font-bold mb-3">10 Jahre Garantie</h3>
+                    <p class="text-gray-600">Funktionsgarantie auf viele Systeme</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-qualitaet.svg" alt="Meister" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Meisterbetrieb</h3>
+                    <p class="text-gray-600">Höchste Qualität durch Fachkompetenz</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-energie.svg" alt="Effizienz" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Energieeffizienz</h3>
+                    <p class="text-gray-600">Nachhaltige Lösungen für die Zukunft</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-team.svg" alt="Service" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Rundum-Service</h3>
+                    <p class="text-gray-600">Von Beratung bis Wartung</p>
+                </div>
             </div>
         </div>
     </section>
@@ -238,9 +280,9 @@
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-gc-red to-red-700 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6">Bereit für Ihre neue Heizung?</h2>
+            <h2 class="text-4xl font-bold mb-8">Bereit für Ihre neue Heizung?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Lassen Sie sich von unseren Heizungsexperten beraten. Wir finden die perfekte Lösung für Ihr Zuhause – energieeffizient, zuverlässig und zukunftssicher.
+                Lassen Sie sich von unseren Heizungsexperten beraten. Wir finden die perfekte Lösung für Ihr Zuhause.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+4994218610588" class="bg-white text-gc-red px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
@@ -267,19 +309,19 @@
                 <div>
                     <h3 class="font-bold text-lg mb-4">Leistungen</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="heizungsbau.html" class="hover:text-gc-yellow">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html" class="hover:text-gc-yellow">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html" class="hover:text-gc-yellow">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html" class="hover:text-gc-yellow">Klimaanlage</a></li>
+                        <li><a href="heizungsbau.html" class="hover:text-gc-yellow transition">Heizungsbau</a></li>
+                        <li><a href="kaminoefen.html" class="hover:text-gc-yellow transition">Kaminöfen</a></li>
+                        <li><a href="badsanierung.html" class="hover:text-gc-yellow transition">Badsanierung</a></li>
+                        <li><a href="klimaanlage.html" class="hover:text-gc-yellow transition">Klimaanlage</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="font-bold text-lg mb-4">Unternehmen</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="ueber-uns.html" class="hover:text-gc-yellow">Über uns</a></li>
-                        <li><a href="/ueber-uns/jobs.html" class="hover:text-gc-yellow">Jobs</a></li>
-                        <li><a href="kontakt.html" class="hover:text-gc-yellow">Kontakt</a></li>
+                        <li><a href="ueber-uns.html" class="hover:text-gc-yellow transition">Über uns</a></li>
+                        <li><a href="/ueber-uns/jobs.html" class="hover:text-gc-yellow transition">Jobs</a></li>
+                        <li><a href="kontakt.html" class="hover:text-gc-yellow transition">Kontakt</a></li>
                     </ul>
                 </div>
                 
@@ -289,13 +331,13 @@
                         <li>Arndt-Sallinger-Str. 5</li>
                         <li>94315 Straubing</li>
                         <li class="pt-2">
-                            <a href="tel:+4994218610588" class="hover:text-gc-yellow">📞 09421 / 861 05 88</a>
+                            <a href="tel:+4994218610588" class="hover:text-gc-yellow transition">📞 09421 / 861 05 88</a>
                         </li>
                         <li>
-                            <a href="tel:+49160948770467" class="hover:text-gc-yellow">📱 0160 / 948 770 67</a>
+                            <a href="tel:+49160948770467" class="hover:text-gc-yellow transition">📱 0160 / 948 770 67</a>
                         </li>
                         <li>
-                            <a href="mailto:info@hs-straubing.de" class="hover:text-gc-yellow">✉️ info@hs-straubing.de</a>
+                            <a href="mailto:info@hs-straubing.de" class="hover:text-gc-yellow transition">✉️ info@hs-straubing.de</a>
                         </li>
                     </ul>
                 </div>
@@ -307,11 +349,16 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 
 </body>

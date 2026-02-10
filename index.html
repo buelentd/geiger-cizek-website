@@ -9,6 +9,9 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
     <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
@@ -34,6 +37,8 @@
     
     <style>
         body { font-family: 'Montserrat', sans-serif; }
+        .swiper-button-next, .swiper-button-prev { color: #E2001A; }
+        .swiper-pagination-bullet-active { background: #E2001A; }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -55,7 +60,7 @@
                         <a href="heizungsbau.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Heizungsbau <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/heizungsbau/waermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Wärmepumpe</a>
                             <a href="/heizungsbau/luftwaermepumpe.html" class="block px-4 py-2 hover:bg-gray-100">Luftwärmepumpe</a>
                             <a href="/heizungsbau/hydraulischer-abgleich.html" class="block px-4 py-2 hover:bg-gray-100">Hydraulischer Abgleich</a>
@@ -68,7 +73,7 @@
                         <a href="kaminoefen.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Kaminöfen <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/kaminoefen/heizungsausstellung.html" class="block px-4 py-2 hover:bg-gray-100">Heizungsausstellung</a>
                         </div>
                     </div>
@@ -77,7 +82,7 @@
                         <a href="badsanierung.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Badsanierung <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/badsanierung/komplettbadsanierung.html" class="block px-4 py-2 hover:bg-gray-100">Komplettbadsanierung</a>
                         </div>
                     </div>
@@ -88,7 +93,7 @@
                         <a href="klimaanlage.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Klimaanlage <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/klimaanlage/split-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Split-Klimaanlage</a>
                             <a href="/klimaanlage/multisplit-klimaanlage.html" class="block px-4 py-2 hover:bg-gray-100">Multisplit-Klimaanlage</a>
                         </div>
@@ -98,33 +103,33 @@
                         <a href="ueber-uns.html" class="text-gray-700 hover:text-gc-red font-medium">
                             Über uns <span class="text-xs">▼</span>
                         </a>
-                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <a href="/ueber-uns/jobs.html" class="block px-4 py-2 hover:bg-gray-100">Jobs</a>
                         </div>
                     </div>
                     
-                    <a href="kontakt.html" class="bg-gc-red text-white px-6 py-2 rounded-full hover:bg-red-700 font-semibold transition">Kontakt</a>
+                    <a href="kontakt.html" class="bg-gc-red text-white px-8 py-4 rounded-full hover:bg-red-700 font-semibold transition">Kontakt</a>
                 </nav>
                 
                 <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="mobileMenuBtn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </div>
         
-        <!-- Mobile Navigation (hidden by default) -->
+        <!-- Mobile Navigation -->
         <div id="mobileMenu" class="hidden lg:hidden bg-white border-t">
             <nav class="container mx-auto px-4 py-4 space-y-2">
                 <a href="index.html" class="block py-2 text-gc-red font-semibold">Home</a>
-                <a href="heizungsbau.html" class="block py-2">Heizungsbau</a>
-                <a href="kaminoefen.html" class="block py-2">Kaminöfen</a>
-                <a href="badsanierung.html" class="block py-2">Badsanierung</a>
-                <a href="lueftung-wasser.html" class="block py-2">Lüftung & Wasser</a>
-                <a href="klimaanlage.html" class="block py-2">Klimaanlage</a>
-                <a href="ueber-uns.html" class="block py-2">Über uns</a>
+                <a href="heizungsbau.html" class="block py-2 hover:text-gc-red">Heizungsbau</a>
+                <a href="kaminoefen.html" class="block py-2 hover:text-gc-red">Kaminöfen</a>
+                <a href="badsanierung.html" class="block py-2 hover:text-gc-red">Badsanierung</a>
+                <a href="lueftung-wasser.html" class="block py-2 hover:text-gc-red">Lüftung & Wasser</a>
+                <a href="klimaanlage.html" class="block py-2 hover:text-gc-red">Klimaanlage</a>
+                <a href="ueber-uns.html" class="block py-2 hover:text-gc-red">Über uns</a>
                 <a href="kontakt.html" class="block py-2 text-gc-red font-semibold">Kontakt</a>
             </nav>
         </div>
@@ -135,7 +140,7 @@
         <div class="absolute inset-0 bg-black opacity-40"></div>
         <div class="container mx-auto px-4 relative z-10 text-white">
             <div class="max-w-3xl">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                <h1 class="text-5xl md:text-6xl font-bold mb-8">
                     Energie-, Klima- & Haustechnik
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-200">
@@ -158,8 +163,8 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold mb-6 text-gray-900">Wer wir sind</h2>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    <h2 class="text-4xl font-bold mb-8 text-gray-900">Wer wir sind</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
                         Mit <strong>Karl Geiger</strong> und <strong>Florian Cizek</strong> haben Sie es mit zwei erfahrenen Meistern im Bereich Heizung/Lüftung/Sanitär zu tun, unterstützt von einem qualifizierten und motivierten jungen Team.
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed">
@@ -169,29 +174,29 @@
                 <div class="bg-gray-100 rounded-3xl p-8">
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0 font-bold text-xl">
                                 ✓
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg">Meisterbetrieb</h3>
+                                <h3 class="font-bold text-lg">Meisterbetrieb</h3>
                                 <p class="text-gray-600">Erfahrene Experten mit Meisterbrief</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0 font-bold text-xl">
                                 ✓
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg">Qualifiziertes Team</h3>
+                                <h3 class="font-bold text-lg">Qualifiziertes Team</h3>
                                 <p class="text-gray-600">Motivierte Fachkräfte für alle Bereiche</p>
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                            <div class="bg-gc-red text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0 font-bold text-xl">
                                 ✓
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg">Regionale Nähe</h3>
+                                <h3 class="font-bold text-lg">Regionale Nähe</h3>
                                 <p class="text-gray-600">Schnell vor Ort in ganz Niederbayern</p>
                             </div>
                         </div>
@@ -201,71 +206,158 @@
         </div>
     </section>
 
-    <!-- Unsere Leistungen -->
+    <!-- USP Section -->
     <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Warum Geiger & Cizek?</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Qualität -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-qualitaet.svg" alt="Qualität" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Höchste Qualität</h3>
+                    <p class="text-gray-600">Meisterhafte Ausführung nach deutschen Standards</p>
+                </div>
+                
+                <!-- Team -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-team.svg" alt="Team" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Erfahrenes Team</h3>
+                    <p class="text-gray-600">Qualifizierte Fachkräfte mit langjähriger Expertise</p>
+                </div>
+                
+                <!-- Komfort -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-komfort.svg" alt="Komfort" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Maximaler Komfort</h3>
+                    <p class="text-gray-600">Wohlfühlen in den eigenen vier Wänden</p>
+                </div>
+                
+                <!-- Energie -->
+                <div class="text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="assets/icons/icon-energie.svg" alt="Energie" class="w-16 h-16">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Energieeffizienz</h3>
+                    <p class="text-gray-600">Nachhaltige Lösungen für die Zukunft</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unsere Leistungen -->
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Unsere Leistungen</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Heizungsbau -->
-                <a href="heizungsbau.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">🔥</div>
+                <a href="heizungsbau.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 group">
+                    <img src="assets/icons/icon-heizung.svg" alt="Heizung" class="w-16 h-16 mb-4">
                     <h3 class="text-2xl font-bold mb-3 text-gray-900">Heizungsbau</h3>
                     <p class="text-gray-600 mb-4">
                         Moderne Heizsysteme: Wärmepumpen, Gasheizungen und mehr. Energieeffizient und zukunftssicher.
                     </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
-                </a>
-                
-                <!-- Kaminöfen -->
-                <a href="kaminoefen.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">🪵</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Kaminöfen</h3>
-                    <p class="text-gray-600 mb-4">
-                        Gemütliche Wärme für Ihr Zuhause. Pelletsöfen, Scheitholz und wasserführende Systeme.
-                    </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
-                </a>
-                
-                <!-- Badsanierung -->
-                <a href="badsanierung.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">🛁</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Badsanierung</h3>
-                    <p class="text-gray-600 mb-4">
-                        Vom alten zum Traumbad. Komplette Badsanierung aus einer Hand – modern und barrierefrei.
-                    </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
-                </a>
-                
-                <!-- Lüftung & Wasser -->
-                <a href="lueftung-wasser.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">💨</div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Lüftung & Wasser</h3>
-                    <p class="text-gray-600 mb-4">
-                        Frische Luft und sauberes Wasser. Lüftungsanlagen und Wasseraufbereitung für Ihr Wohlbefinden.
-                    </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                    <span class="text-gc-red font-semibold group-hover:underline">Mehr erfahren →</span>
                 </a>
                 
                 <!-- Klimaanlage -->
-                <a href="klimaanlage.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">❄️</div>
+                <a href="klimaanlage.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 group">
+                    <img src="assets/icons/icon-klimaanlage.svg" alt="Klimaanlage" class="w-16 h-16 mb-4">
                     <h3 class="text-2xl font-bold mb-3 text-gray-900">Klimaanlage</h3>
                     <p class="text-gray-600 mb-4">
                         Angenehmes Raumklima das ganze Jahr. Split- und Multisplit-Klimaanlagen für jeden Bedarf.
                     </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                    <span class="text-gc-red font-semibold group-hover:underline">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Kaminöfen -->
+                <a href="kaminoefen.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 group">
+                    <img src="assets/icons/icon-heizung.svg" alt="Kaminofen" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Kaminöfen</h3>
+                    <p class="text-gray-600 mb-4">
+                        Gemütliche Wärme für Ihr Zuhause. Pelletsöfen, Scheitholz und wasserführende Systeme.
+                    </p>
+                    <span class="text-gc-red font-semibold group-hover:underline">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Badsanierung -->
+                <a href="badsanierung.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 group">
+                    <img src="assets/icons/icon-sanitaer.svg" alt="Bad" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Badsanierung</h3>
+                    <p class="text-gray-600 mb-4">
+                        Vom alten zum Traumbad. Komplette Badsanierung aus einer Hand – modern und barrierefrei.
+                    </p>
+                    <span class="text-gc-red font-semibold group-hover:underline">Mehr erfahren →</span>
+                </a>
+                
+                <!-- Lüftung & Wasser -->
+                <a href="lueftung-wasser.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 group">
+                    <img src="assets/icons/icon-komfort.svg" alt="Lüftung" class="w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Lüftung & Wasser</h3>
+                    <p class="text-gray-600 mb-4">
+                        Frische Luft und sauberes Wasser. Lüftungsanlagen und Wasseraufbereitung für Ihr Wohlbefinden.
+                    </p>
+                    <span class="text-gc-red font-semibold group-hover:underline">Mehr erfahren →</span>
                 </a>
                 
                 <!-- Über uns -->
-                <a href="ueber-uns.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
-                    <div class="text-5xl mb-4">👥</div>
+                <a href="ueber-uns.html" class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 group">
+                    <img src="assets/icons/icon-team.svg" alt="Team" class="w-16 h-16 mb-4">
                     <h3 class="text-2xl font-bold mb-3 text-gray-900">Über uns</h3>
                     <p class="text-gray-600 mb-4">
                         Lernen Sie unser Team kennen. Erfahrene Meister und qualifizierte Fachkräfte für Ihr Projekt.
                     </p>
-                    <span class="text-gc-red font-semibold">Mehr erfahren →</span>
+                    <span class="text-gc-red font-semibold group-hover:underline">Mehr erfahren →</span>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Logo Slider -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Unsere Partner</h2>
+            
+            <div class="swiper partnerSwiper">
+                <div class="swiper-wrapper items-center">
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="bg-white rounded-xl p-8 h-32 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gray-700">Daikin</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="bg-white rounded-xl p-8 h-32 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gray-700">Mitsubishi</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="bg-white rounded-xl p-8 h-32 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gray-700">Viessmann</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="bg-white rounded-xl p-8 h-32 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gray-700">Vaillant</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="bg-white rounded-xl p-8 h-32 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gray-700">Buderus</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flex justify-center items-center">
+                        <div class="bg-white rounded-xl p-8 h-32 flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gray-700">Stiebel Eltron</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -273,7 +365,7 @@
     <!-- CTA Section -->
     <section class="py-20 bg-gradient-to-r from-gc-red to-red-700 text-white">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6">Haben Sie Fragen?</h2>
+            <h2 class="text-4xl font-bold mb-8">Haben Sie Fragen?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">
                 Egal ob Heizungsbau, Kaminöfen oder eine komplette Badsanierung. Wir finden stets die beste Lösung für Ihre Immobilie.
             </p>
@@ -302,19 +394,19 @@
                 <div>
                     <h3 class="font-bold text-lg mb-4">Leistungen</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="heizungsbau.html" class="hover:text-gc-yellow">Heizungsbau</a></li>
-                        <li><a href="kaminoefen.html" class="hover:text-gc-yellow">Kaminöfen</a></li>
-                        <li><a href="badsanierung.html" class="hover:text-gc-yellow">Badsanierung</a></li>
-                        <li><a href="klimaanlage.html" class="hover:text-gc-yellow">Klimaanlage</a></li>
+                        <li><a href="heizungsbau.html" class="hover:text-gc-yellow transition">Heizungsbau</a></li>
+                        <li><a href="kaminoefen.html" class="hover:text-gc-yellow transition">Kaminöfen</a></li>
+                        <li><a href="badsanierung.html" class="hover:text-gc-yellow transition">Badsanierung</a></li>
+                        <li><a href="klimaanlage.html" class="hover:text-gc-yellow transition">Klimaanlage</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="font-bold text-lg mb-4">Unternehmen</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="ueber-uns.html" class="hover:text-gc-yellow">Über uns</a></li>
-                        <li><a href="/ueber-uns/jobs.html" class="hover:text-gc-yellow">Jobs</a></li>
-                        <li><a href="kontakt.html" class="hover:text-gc-yellow">Kontakt</a></li>
+                        <li><a href="ueber-uns.html" class="hover:text-gc-yellow transition">Über uns</a></li>
+                        <li><a href="/ueber-uns/jobs.html" class="hover:text-gc-yellow transition">Jobs</a></li>
+                        <li><a href="kontakt.html" class="hover:text-gc-yellow transition">Kontakt</a></li>
                     </ul>
                 </div>
                 
@@ -324,13 +416,13 @@
                         <li>Arndt-Sallinger-Str. 5</li>
                         <li>94315 Straubing</li>
                         <li class="pt-2">
-                            <a href="tel:+4994218610588" class="hover:text-gc-yellow">📞 09421 / 861 05 88</a>
+                            <a href="tel:+4994218610588" class="hover:text-gc-yellow transition">📞 09421 / 861 05 88</a>
                         </li>
                         <li>
-                            <a href="tel:+49160948770467" class="hover:text-gc-yellow">📱 0160 / 948 770 67</a>
+                            <a href="tel:+49160948770467" class="hover:text-gc-yellow transition">📱 0160 / 948 770 67</a>
                         </li>
                         <li>
-                            <a href="mailto:info@hs-straubing.de" class="hover:text-gc-yellow">✉️ info@hs-straubing.de</a>
+                            <a href="mailto:info@hs-straubing.de" class="hover:text-gc-yellow transition">✉️ info@hs-straubing.de</a>
                         </li>
                     </ul>
                 </div>
@@ -342,11 +434,39 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Partner Swiper
+        const partnerSwiper = new Swiper('.partnerSwiper', {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 6,
+                }
+            }
+        });
     </script>
 
 </body>

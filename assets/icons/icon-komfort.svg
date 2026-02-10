@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <g id="athoka-klimatechnik-montage-icon-teaser-komfort" transform="translate(16845.807 15236)">
+    <rect id="Rectangle_2420" data-name="Rectangle 2420" width="150" height="150" transform="translate(-16845.807 -15236)" fill="#fff" opacity="0"/>
+    <g id="Group_6863" data-name="Group 6863" transform="translate(-5036.807)">
+      <rect id="Rectangle_1293" data-name="Rectangle 1293" width="82.554" height="81.333" rx="40.667" transform="translate(-11797.118 -15221.703)" opacity="0.15"/>
+      <g id="Group_6862" data-name="Group 6862" transform="translate(-197.986 -154.357)">
+        <g id="Group_6859" data-name="Group 6859">
+          <path id="Path_104074" data-name="Path 104074" d="M106.542,38.251S61.323,41.576,28.851,19.866" transform="translate(-11589.019 -15048)" fill="none" stroke="#265aa6" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <path id="Path_104075" data-name="Path 104075" d="M82.9,29.577c-4.683-8.094-12.21-11.9-19.818-14.165L60.869,23.7,54.862,13.312c-3.264-.682-6.335-1.29-8.922-2.028C36.206,8.5,28.318-2.177,18.018,3.781c-6.866,3.973-8.6,14.7-3.123,24.159a28.093,28.093,0,0,0,3.971,5.19l15.267,2.307-7.592,4.392c.952.679,1.931,1.342,2.955,2.016,13.412,8.632,33.2,14.318,51.487,3.742" transform="translate(-11589.02 -15048)" fill="none" stroke="#265aa6" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+        </g>
+        <g id="Group_6860" data-name="Group 6860">
+          <line id="Line_55" data-name="Line 55" x2="24.668" transform="translate(-11540.175 -14972.108)" fill="none" stroke="#265aa6" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <path id="Path_104076" data-name="Path 104076" d="M75.813,88.227l-8.755-8.755a12.277,12.277,0,0,1-2.321-3.235c-2.279-4.583-9.326-16.79-19.76-16.79a38.891,38.891,0,0,0-14.97,3.41,8.163,8.163,0,0,1-3.327.7h-16.6C5.357,63.559,2,66.472,2,69.844s3.771,6.049,8.03,6.049" transform="translate(-11550.205 -15048.001)" fill="none" stroke="#265aa6" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <path id="Path_104077" data-name="Path 104077" d="M96.563,100.561l-4.61-4.61a12.332,12.332,0,0,0-8.721-3.613H69.3a12.375,12.375,0,0,1-2.992-.368L46.363,86.983A12.323,12.323,0,0,1,40.7,83.809C36.13,79.3,26.669,69.79,26.669,68.245c0-3.371,4.317-4.687,6.374-4.687,3.74,0,10.729,4.975,14.759,8.1l.041.041" transform="translate(-11595.624 -15048.001)" fill="none" stroke="#265aa6" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
